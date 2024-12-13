@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.108.0">
+  <title>登录</title>
+  <link rel="icon" type="image/png" href="../../static/images/touxiang.jpg">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+  <link href="../../static/CSS/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ... 其他样式保持不变 ... */
+    .password-switch {
+      display: inline-block;
+      position: relative;
+      padding-left: 2.25rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .password-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(18px);
+      -ms-transform: translateX(18px);
+      transform: translateX(18px);
+    }
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="s" rel="stylesheet">
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("floatingPassword");
+      const switchCheckbox = document.querySelector(".password-switch input[type='checkbox']");
+      if (switchCheckbox.checked) {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+
+    function enableLoginButton() {
+      const rememberMeCheckbox = document.querySelector('input[value="remember-me"]');
+      const loginButton = document.querySelector('.btn-primary');
+      loginButton.disabled = !rememberMeCheckbox.checked;
+    }
+
+    function performLogin() {
+      const rememberMeCheckbox = document.querySelector('input[value="remember-me"]');
+      if (rememberMeCheckbox.checked) {
+        window.location.href = "../templates/index.html";
+      } else {
+        alert("请先勾选 '已记住账号密码' 再尝试登录。");
+      }
+    }
+
+    window.onload = function() {
+      alert('您好，请登录！');
+      // 初始化时检查复选框状态并设置登录按钮状态
+      enableLoginButton();
+      // 监听复选框状态变化以更新登录按钮状态
+      document.querySelector('input[value="remember-me"]').addEventListener('change', enableLoginButton);
+    };
+  </script>
+</head>
+<body class="text-center">
+<main class="form-signin w-100 m-auto">
+  <form>
+    <img class="mb-4" src="../../static/images/touxiang.jpg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">请登录</h1>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">账号</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">密码</label>
+      <div class="password-switch">
+        <input type="checkbox" id="passwordVisibilitySwitch" onchange="togglePasswordVisibility()" />
+        <label class="slider round" for="passwordVisibilitySwitch"></label>
+      </div>
+    </div>
+    <div class="form-check d-flex justify-content-between mb-3">
+      <div class="checkbox mb-3">
+        <label><input type="checkbox" value="remember-me" onclick="enableLoginButton()"> 已记住账号密码</label>
+      </div>
+      <a href="../sign-in/register.html" class="float-end">注册</a>
+    </div>
+    <a href="#" onclick="performLogin(); return false;"><button type="button" class="w-100 btn btn-lg btn-primary" disabled>登录</button></a>
+    <p class="mt-5 mb-3 text-muted">&copy; 2024 樊宇</p>
+  </form>
+</main>
+</body>
+</html>

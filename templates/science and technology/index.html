@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>背景图片网页</title>
+    <link rel="icon" type="image/png" href="../../static/images/science%20and%20technology.gif">
+    <style>
+        /* 设置整个body元素的背景图片 */
+        body {
+            background-image: url("../../static/images/science and technology.gif");
+            background-size: 57%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* 可选：设置文本颜色，确保文字在背景图片上可读 */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 使用视窗高度来确保内容区域占据整个屏幕高度 */
+            color: white;
+            text-align: center;
+        }
+
+        /* 设置按钮样式 */
+        .btn {
+            width: 3%;
+            height: auto;
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0062cc;
+            border: 1px solid #0062cc;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <a href="../news/index.html" class="btn btn-primary">
+        <button type="button" class="btn w-100 btn-lg btn-primary">开启</button>
+    </a>
+</div>
+</body>
+</html>

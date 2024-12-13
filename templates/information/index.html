@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>智能小车</title>
+    <link rel="icon" type="image/png" href="../../static/images/logo.png">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能小车 - 超载与头盔检测</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: box-shadow 0.5s;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            loading: lazy;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: none;
+                width: 100%;
+            }
+            nav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        @media (max-width: 600px) {
+            nav.responsive {
+                position: relative;
+            }
+            nav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            nav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>智能小车 - 超载与头盔检测</h1>
+    </header>
+    <nav>
+        <a href="#overview">概览</a>
+        <a href="#features">功能</a>
+        <a href="#contact">联系我们</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <section id="overview">
+            <h2>概览</h2>
+            <p>我们的智能小车配备了先进的超载检测和头盔检测系统，确保运输安全和遵守交通规则。</p>
+            <img src="../../static/images/xiaoche.jpg" alt="智能小车">
+        </section>
+        <section id="features">
+            <h2>功能</h2>
+            <ul>
+                <li>实时超载检测，防止因超载导致的交通事故。</li>
+                <li>头盔检测系统，确保驾驶员的安全。</li>
+                <li>智能报警系统，一旦检测到违规行为立即通知。</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>联系我们</h2>
+            <p>了解更多信息或咨询合作，请联系我们：</p>
+            <p>电话：李柯蒙 136 4662 9845</p>
+            <p>电话：沈金强 150 2430 9260</p>
+            <p>电话：樊宇 184 5835 9006</p>
+            <p>电话：邓承恩 182 6837 7462</p>
+        </section>
+    </main>
+    <footer>
+        <p>版权所有 &copy; 2024 智能小车</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('responsive');
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
